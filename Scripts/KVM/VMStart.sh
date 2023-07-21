@@ -5,7 +5,7 @@
 #History
 #2023   Ueincn  Release
 
-#qemu-system-x86_64 -m 4096 -smp 4 -display sdl -device VGA -device nec-usb-xhci -device usb-tablet -device usb-kbd -drive if=virtio,file=/VM/debian-10-generic-amd64-20230222-1299-uroot-proot.qcow2,id=hd0,format=qcow2,media=disk -net nic -net tap,ifname=tap0
+#qemu-system-x86_64 -m 4096 -smp 4 -display gtk -device VGA -device nec-usb-xhci -device usb-tablet -device usb-kbd -drive if=virtio,file=/VM/debian-10-generic-amd64-20230222-1299-uroot-proot.qcow2,id=hd0,format=qcow2,media=disk -net nic -net tap,ifname=tap0
 
 #sudo ip tuntap add dev tap0 mode tap
 #sudo ip link set dev tap0 up
