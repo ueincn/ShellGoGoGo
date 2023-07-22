@@ -1,0 +1,5 @@
+# Bash
+BASH是Bourne Again Shell的缩写，Bunne Again Shell是一个双关的名称，是对Bourne Shell(即Steven Bourne发明)的致敬。
+Bash是由Brian Fox编写的Shell程序，是Bourne Shell程序“sh”的升级版本。这是一个开源GNU项目。它于1989年发布，是GNU/Linux操作系统最流行的shell发行版之一。它提供了比Bourne Shell更好的功能，可用于编程和交互使用。它包括命令行编辑，键绑定，无限制大小的命令历史记录等。
+用基本术语来说，Bash是一个命令行解释器，通常在文本窗口中运行，用户可以在其中解释命令以执行各种操作。这些命令在文件中作为一系列命令的组合称为Shell脚本。Bash可以从Shell脚本读取和执行命令。
+Bash是大多数Linux发行版和苹果MacOS的默认登录Shell。
