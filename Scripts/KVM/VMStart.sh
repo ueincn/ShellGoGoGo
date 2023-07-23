@@ -27,7 +27,8 @@ function VMRun(){
     -smp $CPU \
     -display gtk \
     -device nec-usb-xhci -device usb-tablet -device usb-kbd \
-    -drive if=virtio,file=$IMAGEPATH,id=hd0,format=$IMAGEFORMAT,media=disk &
+    -drive if=virtio,file=$IMAGEPATH,id=hd0,format=$IMAGEFORMAT,media=disk \
+    -net nic -net tap,ifname=tap0,script=no,downscript=no >/dev/null 2>&1 &
 }
 
 VMRun
