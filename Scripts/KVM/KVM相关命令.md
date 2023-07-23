@@ -14,12 +14,16 @@ $ lsmod | grep kvm
 #### 软件列表
 ```
 #必备
-libvirt-daemon
-qemu-system
+libvirt-daemon-system >>libvirtd
+libvirt-clients >>virsh
+virtinst >>virt-install/virt-viewer
+qemu-system >>qemu-system-x86_64
+qemu-system-gui >>gtk
+qemu-img
+bridge-utils
 
 #选装
 virt-manager
-bridge-utils
 ```
 
 #### 启动命令
