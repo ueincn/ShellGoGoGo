@@ -34,27 +34,23 @@ function KvmInstall(){
     echo "KVM 环境开始安装："
 
     echo -ne "  qemu-system Installing"
-    apt-get install qemu-system -y >/dev/null 2>&1 &
-    SpinLine
-
-    echo -ne "  qemu-system-img Installing"
-    apt-get install qemu-system -y >/dev/null 2>&1 &
+    sudo apt-get install qemu-system -y >/dev/null 2>&1 &
     SpinLine
 
     echo -ne "  qemu-system-gui Installing"
-    apt-get install qemu-gui -y >/dev/null 2>&1 &
+    sudo apt-get install qemu-gui -y >/dev/null 2>&1 &
     SpinLine
 
     echo -ne "  libvirt-daemon-system Installing"
-    apt-get install libvirt-daemon-system -y >/dev/null 2>&1 &
+    sudo apt-get install libvirt-daemon-system -y >/dev/null 2>&1 &
     SpinLine
 
     echo -ne "  bridge-utils Installing"
-    apt-get install bridge-utils -y >/dev/null 2>&1 &
+    sudo apt-get install bridge-utils -y >/dev/null 2>&1 &
     SpinLine
 
     echo -ne "  libvirt-clients Installing"
-    apt-get install libvirt-clients -y >/dev/null 2>&1 &
+    sudo apt-get install libvirt-clients -y >/dev/null 2>&1 &
     SpinLine
 
     sudo systemctl restart libvirtd.service
