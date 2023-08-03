@@ -29,3 +29,13 @@ Linux 的 Shell 种类众多，常见的有：
 - K Shell（/usr/bin/ksh）
 - Shell for Root（/sbin/sh）
 - ……
+
+# ShellGoGoGo Project
+```shell
+.
+├── README.md     //自述文件
+├── Shell         //Shell
+├── ShellGood     //有趣的Shell脚本
+├── ShellGuide    //Shell教程
+└── ShellScripts  //Shell脚本
+```
