@@ -18,3 +18,12 @@ Linux 的 Shell 种类众多，常见的有：
 - K Shell（/usr/bin/ksh）
 - Shell for Root（/sbin/sh）
 - ……
+
+要想知道操作系统支持哪种Shell类型，可在终端中输入以下命令：
+```bash
+cat /etc/shells
+```
+要想知道bash在操作系统中的位置，可键入以下命令，将获得一个特定的位置：
+```bash
+which bash
+```
