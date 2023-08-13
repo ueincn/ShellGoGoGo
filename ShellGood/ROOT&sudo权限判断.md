@@ -8,6 +8,15 @@ else
     echo " Not Root! "
 fi
 ```
+```bash
+#! /bin/bash
+
+if [ $UID -eq 0 ]; then
+    echo "Is Superuser! "
+else
+    echo "[ !! Please use sudo permissions or switch root to run the script !! ]"
+fi
+```
 2. 判断用户是否有sudo权限
 如果用户有sudo权限，则`$?`返回值是0；没有sudo权限，则`$?`返回值为非0.
 ```bash
