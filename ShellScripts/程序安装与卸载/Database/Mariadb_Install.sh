@@ -3,7 +3,9 @@
 #    MariaDB Install Scripts
 #History
 #2023   Ueincn  Release
-
+# 已测试发行版
+# RHEL: [8.0]
+# CentOS: [7.9.2009]
 
 function MariaDBVerison(){
     echo "Mariadb installation version list: "
