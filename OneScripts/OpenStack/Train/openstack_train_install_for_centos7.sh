@@ -77,7 +77,7 @@ function OSCheck(){
     EchoSubTitle "System Check"
     sleep 0.1
     
-    if dmesg | grep "Linux version" | grep -E "CentOS|centos|CENTOS" >/dev/null 2>&1; then
+    if dmesg | grep "Linux version" | grep -E "CentOS|centos|CENTOS" >>$OPENSTACK_INSTALL_LOG 2>&1; then
         OS="centos"
         OS_NAME=$(cat /etc/os-release | grep -w "NAME" | awk -F '"' '{print $2}') 
         OS_VERSION=$(cat /etc/os-release | grep -w "VERSION" | awk -F '"' '{print $2}' | awk -F '(' '{print $1}') 
@@ -91,19 +91,19 @@ function OSCheck(){
 function VirtualenvCheck(){
     EchoSubTitle "Vritualenv Check"
     sleep 0.1
-    egrep "(svm|vmx)" /proc/cpuinfo >/dev/null 2>&1 && lsmod | grep kvm >/dev/null 2>&1
+    egrep "(svm|vmx)" /proc/cpuinfo >/dev/null 2>&1 && lsmod | grep kvm >>$OPENSTACK_INSTALL_LOG 2>&1
     StatusCode
 }
 function DisableFirewall(){
     EchoSubTitle "Firewall Disable"
     sleep 0.1
-    if systemctl status firewalld.service >/dev/null 2>&1; then
-        systemctl stop firewalld >/dev/null 2>&1
-        systemctl disable firewalld >/dev/null 2>&1
+    if systemctl status firewalld.service >>$OPENSTACK_INSTALL_LOG 2>&1; then
+        systemctl stop firewalld >>$OPENSTACK_INSTALL_LOG 2>&1
+        systemctl disable firewalld >>$OPENSTACK_INSTALL_LOG 2>&1
         StatusCode
-    elif systemctl status ufw >/dev/null 2>&1; then
-        systemctl stop ufw >/dev/null 2>&1
-        systemctl disable ufw >/dev/null 2>&1
+    elif systemctl status ufw >>$OPENSTACK_INSTALL_LOG 2>&1; then
+        systemctl stop ufw >>$OPENSTACK_INSTALL_LOG 2>&1
+        systemctl disable ufw >>$OPENSTACK_INSTALL_LOG 2>&1
         StatusCode
     else
         StatusCode
