@@ -34,7 +34,6 @@ Linux 的 Shell 种类众多，常见的有：
 ```shell
 .
 ├── README.md     //自述文件
-├── OneScripts    //一键安装脚本
 ├── Shell         //Shell
 ├── ShellGood     //有趣的Shell脚本
 ├── ShellGuide    //Shell教程
